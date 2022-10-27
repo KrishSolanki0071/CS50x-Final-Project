@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+    <head>
+        
+        <meta charset="UTF-8">
+        <title> Registration Form | CS50x Final Project </title>
+        <link rel="stylesheet" href="stylingforRegis.css">
+         <meta name = "viewport" content = "width = device - width, initial-scale = 1.0">
+
+    </head>
+<body>
+    <div data-video="UakHkEFqiGs"
+    data-autoplay="1"
+    data-loop="1"
+    id="youtube-audio">
+    </div>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+    <div class="container">
+        <div class = "title">Registration</div>
+        <form action="#">
+            <div class="user-details">
+                <div class="input-box">
+                <span class="details">First Name</span>
+                <input type ="text" autocomplete = "off" placeholder = "First Name" autofocus First name = "First Name" required>
+                </div>
+
+                <div class="input-box">
+                <span class="details">Middle Name</span>
+                <input type ="text" autocomplete = "off" placeholder = "Middle Name">
+                </div>
+
+                <div class="input-box">
+                <span class="details">Last Name</span>
+                <input type ="text" autocomplete = "off" placeholder = "Last Name" required>
+                </div>
+
+                <div class="input-box">
+                <span class="details">Username</span>
+                <input type ="text" autocomplete = "off" placeholder = "Username" required>
+                </div>
+
+                <div class="input-box">
+                <span class="details">Password</span>
+                <input type ="password" autocomplete = "off" placeholder = "Password" required>
+                </div>
+
+                <div class="input-box">
+                <span class="details">Confirm Password</span>
+                <input type ="password" autocomplete = "off" placeholder = "Confirm your Password" required>
+                </div>
+
+                <div class="input-box">
+                <span class="details">E-Mail</span>
+                <input type ="email" autocomplete = "off" placeholder = "E-mail" required>
+                </div>
+
+                <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type ="number" autocomplete = "off" placeholder = "Phone Number" required>
+                </div>
+
+                <div class="input-box">
+                <span class="details">Date of Birth</span>
+                <input type ="date" autocomplete = "off" required>
+                </div>
+              
+            </div>
+            <div class="gender-details">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <span class = "gender-title">Gender</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class = "dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class = "dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value = "Register"/>
+            </div>
+        </form>
+        <script type="text/javascript">
+        const sriptURL = 'https://script.google.com/macros/s/AKfycbx9xhn4y4WXl7xtpnCnGhjeDeXvBr1NiMhB_xg3fUBtyOiCZgCgo851froyy38aD4AL/exec'
+            const form = document.forms['google-sheet']
+
+            form.addEventListener('Register', e =>{
+                e.preventDefault()
+                fetch(sriptURL, {method: 'POST', body: new FormData(form)})
+                    .then(Response => alert("You have been successfully Registered!"))
+                    .catch(error => console.error('Uh oh, An Error has been occurred!', error.message))
+            })
+            
+        </script>
+        
+</body>
+</html>
